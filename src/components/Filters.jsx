@@ -30,6 +30,7 @@ function Filters({
     return () => {
       currentInput.removeEventListener("keypress", eventHandler);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [typeValue]);
 
   return (
