@@ -45,7 +45,8 @@ export default function MovieInfo({ movie }) {
                       {producer.name}
                     </span>
                   );
-                } else return;
+                }
+                return null;
               })}
           </div>
         </div>

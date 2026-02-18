@@ -6,6 +6,7 @@ export default function useMovie(movie) {
 
   useEffect(() => {
     dataFetch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movie]);
 
   async function dataFetch() {
@@ -15,10 +16,10 @@ export default function useMovie(movie) {
     if (!movie) return;
     try {
       const movieDetailsData = await fetch(
-        `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${API}&language=en`
+        `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${API}&language=en`,
       );
       const movieCreditsData = await fetch(
-        `https://api.themoviedb.org/3/movie/${movie.id}/credits?api_key=${API}&language=en`
+        `https://api.themoviedb.org/3/movie/${movie.id}/credits?api_key=${API}&language=en`,
       );
       const movieDetailsResults = await movieDetailsData.json();
       const movieCreditsResults = await movieCreditsData.json();

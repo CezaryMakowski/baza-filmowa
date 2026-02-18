@@ -6,6 +6,7 @@ export default function useMovies(page, setIsLoading, setIsError) {
 
   useEffect(() => {
     dataFetch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   async function dataFetch() {
@@ -16,13 +17,13 @@ export default function useMovies(page, setIsLoading, setIsError) {
     try {
       if (page === 3) {
         const dataPage1 = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${API}&language=en-US&page=1`
+          `https://api.themoviedb.org/3/movie/popular?api_key=${API}&language=en-US&page=1`,
         );
         const dataPage2 = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${API}&language=en-US&page=2`
+          `https://api.themoviedb.org/3/movie/popular?api_key=${API}&language=en-US&page=2`,
         );
         const dataPage3 = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${API}&language=en-US&page=3`
+          `https://api.themoviedb.org/3/movie/popular?api_key=${API}&language=en-US&page=3`,
         );
         const resultPage1 = await dataPage1.json();
         const resultPage2 = await dataPage2.json();
@@ -35,7 +36,7 @@ export default function useMovies(page, setIsLoading, setIsError) {
         ];
       } else {
         const data = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${API}&language=en-US&page=${page}`
+          `https://api.themoviedb.org/3/movie/popular?api_key=${API}&language=en-US&page=${page}`,
         );
         result = await data.json();
         result = [...result.results];

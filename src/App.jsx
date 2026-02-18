@@ -1,6 +1,6 @@
 import Movie from "./components/movie";
 import Filters from "./components/Filters";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import useMovies from "./hooks/useMovies";
 import useFilters from "./hooks/useFilters";
 import useSearch from "./hooks/useSearch";

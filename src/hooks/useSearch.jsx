@@ -20,11 +20,13 @@ export default function useMovies(
 
   useEffect(() => {
     dataFetch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, query]);
 
   useEffect(() => {
     setSearchedMovies([]);
     setSearchedPage(3);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   async function dataFetch() {

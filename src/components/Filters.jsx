@@ -25,16 +25,21 @@ function Filters({
   }
 
   useEffect(() => {
-    searchInput.current.addEventListener("keypress", eventHandler);
+    const currentInput = searchInput.current;
+    currentInput.addEventListener("keypress", eventHandler);
     return () => {
-      searchInput.current.removeEventListener("keypress", eventHandler);
+      currentInput.removeEventListener("keypress", eventHandler);
     };
   }, [typeValue]);
 
   return (
     <>
       <div className="search-input-wrapper">
-        <img src="/search-icon.svg" className="search-icon left"></img>
+        <img
+          src="/search-icon.svg"
+          alt="Search"
+          className="search-icon left"
+        ></img>
         <div className="search-bar">
           <input
             ref={searchInput}
@@ -47,6 +52,7 @@ function Filters({
           ></input>
           <img
             src="/erase-icon.svg"
+            alt="Clear search"
             className={`search-erase ${typeValue ? "" : "hidden"}`}
             onClick={() => {
               setTypeValue("");
@@ -55,7 +61,11 @@ function Filters({
             }}
           ></img>
         </div>
-        <img src="/copy-icon.svg" className="search-icon right"></img>
+        <img
+          src="/copy-icon.svg"
+          alt="Copy"
+          className="search-icon right"
+        ></img>
       </div>
       <div className="filters-wrapper">
         <button

@@ -1,12 +1,11 @@
 import "./FocusedMovie.css";
 import useMovie from "../hooks/useMovie";
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect } from "react";
 import Cast from "./Cast";
 import MovieInfo from "./MovieInfo";
 
 const FocusedMovie = ({ movie, setFocusedMovie }) => {
-  const { movieDetails, isError } = useMovie(movie);
+  const { movieDetails } = useMovie(movie);
 
   function clickHandler() {
     setFocusedMovie(null);
