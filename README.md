@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Movie Database Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplikacja React do przeglądania, wyszukiwania i filtrowania filmów z interfejsem użytkownika.
 
-## Available Scripts
+## Opis Projektu
 
-In the project directory, you can run:
+Movie Database to responsywna aplikacja webowa zbudowana na bazie React, która pozwala użytkownikom:
 
-### `npm start`
+- Przeglądać katalog filmów
+- Wyszukiwać filmy po tytule
+- Filtrować filmy po różnych kryteriach
+- Wyświetlać szczegółowe informacje o filmach
+- Przeglądać obsadę filmów
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Struktura Projektu
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+src/
+├── components/          # Komponenty React
+│   ├── Cast.jsx        # Komponent wyświetlający obsadę
+│   ├── Filters.jsx     # Komponent filtrowania
+│   ├── FocusedMovie.jsx # Widok szczegółowy filmu
+│   ├── Movie.jsx       # Komponent pojedynczego filmu
+│   ├── MovieInfo.jsx   # Informacje o filmie
+│   └── *.css           # Style komponentów
+├── hooks/              # Custom React hooks
+│   ├── useFilters.jsx  # Hook dla filtrów
+│   ├── useMovie.jsx    # Hook dla wybranego filmu
+│   ├── useMovies.jsx   # Hook dla listy filmów
+│   └── useSearch.jsx   # Hook dla wyszukiwania
+├── App.jsx             # Główny komponent aplikacji
+└── index.js            # Punkt wejścia
+public/
+└── index.html          # HTML template
+```
 
-### `npm test`
+## Instalacja
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Sklonuj/pobierz projekt
+2. Zainstaluj zależności:
 
-### `npm run build`
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Uruchomienie
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Aby uruchomić aplikację w trybie development:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+Aplikacja będzie dostępna na `http://localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Dostępne Skrypty
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `npm start` - Uruchamia aplikację w trybie development
+- `npm build` - Buduje aplikację do produkcji
+- `npm test` - Uruchamia testy
+- `npm eject` - Ejektuje konfigurację (operation irreversible!)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologie
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React** - Biblioteka do budowania interfejsów użytkownika
+- **CSS** - Stylowanie komponentów
+- **JavaScript ES6+** - Język programowania
 
-## Learn More
+## Wymagania
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Node.js (wersja 14 lub wyższa)
+- npm lub yarn
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Kontakt
 
-### Code Splitting
+Jeśli chcesz nawiązać współpracę lub masz pytania, skontaktuj się ze mną:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Imię i nazwisko: Cezary Makowski
+- E-mail: cezary.makowski96@gmail.com
